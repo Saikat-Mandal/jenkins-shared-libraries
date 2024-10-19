@@ -5,4 +5,5 @@ def call(String project , String imageTag , String dockerHubUser){
    bat "docker image tag ${project}:${imageTag} ${env.dockerHubUser}/${project}:${imageTag}"
    bat "docker push ${env.dockerHubUser}/${project}:${imageTag}"
    echo "Code pushing successfull !"
+   }
 }
